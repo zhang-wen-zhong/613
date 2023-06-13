@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>JEFFERY OLD SCHOOL</title>
+    <style>
+        *{ 
+            /* outline: 1px solid blue; */
+        }
+        .banner_right,
+        .annotation_text,.annotation_location{
+            display: none;
+        }
+        @media screen and (min-width: 768px ){
+            .banner_right{
+                display: block;
+                text-align: end;
+                font-size: 16px;
+                padding: 2% 15%;
+                margin: 2% 0 0;
+                border-top: 1px solid #ccc;
+            }
+            .banner_caption{
+                font-size: 80px;
+                padding: 0 20%;
+                text-align: left;
+                
+            }
+            .banner_annotation{
+                padding: 0 0 0 20%;
+                display: flex;
+                width: 100%;
+            }
+            .annotation_text{
+                width: 50%;
+                display: block;
+                font-size: 12px;
+            }
+            .annotation_location{
+                width: 50%;
+                display: block;
+                font-size: 12px;
+                padding: 0 2%;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .banner_right{
+                font-size: 30px;
+            }
+            .banner_caption{
+                font-size: 100px; 
+            }
+            .annotation_text,.annotation_location{
+                font-size: 22px;
+            }
+        }
+        .card img{
+          border: 2px solid white;
+          transition: border-color 0.5s ease;
+        }
+        .card img:hover {
+          border-color: rgb(0, 255, 55);
+        }
+        .card-title, .card-text,.card-reserve{
+            font-size: 12px;
+        }
+        .card-body a{
+           text-decoration: none;
+           color: white;
+           text-align: center;
+        }
+        .card-reserve{
+           width: 25%;
+           margin: auto;
+           border-radius: 10px;
+           background-color: red;
+           bottom: 0;
+        }
+        .introduce_caption_timeline{
+            display: none;
+        }
+        
+        @media screen and (min-width: 768px ){
+            .introduce{
+                width: 100%;
+                display: flex;
+                margin: 5% 0;
+            }
+            .introduce_caption{
+                width: 20%;
+            }
+            .introduce_caption_timeline{
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                margin: 10% 0;
+            }
+            .introduce_caption_timeline p{
+                position: relative;
+                font-size: 12px;
+                left: 40%;
+                padding: 4%;
+                transform: rotate(-20deg);
+            }
+            .introduce_caption_timeline::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 40%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: 100%;
+                background-color: black;
+            }
+            .introduce_page{
+                width: 80%;
+            }
+            .card-title, .card-text,.card-reserve{
+                font-size: 16px;
+            }
+            .card-body a{
+                text-decoration: none;
+                color: white;
+                text-align: center;
+            }
+            .card-reserve{
+                width: 25%;
+                margin: auto;
+                padding: 1% 0;
+                margin: 2% 0;
+                border-radius: 10px;
+                background-color: red;
+                position: absolute;
+                bottom: 0;
+                left: 55%;
+
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .card-title, .card-text,.card-reserve{
+            font-size: 22px; 
+            }
+            .introduce_caption_timeline p{
+                font-size: 16px;
+            }
+        }
+        .article{
+            margin: 10% 0;
+        }
+        .article_title{
+            font-size: 14px;
+            padding: 5% 0;
+        }
+        @media screen and (min-width: 768px ){
+            .atricle_card{
+                margin: 5% 0;
+                border-top: 1px solid #ccc;
+            }
+            .article_title{
+            font-size: 16px;
+            margin: 0 0 0 30%;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .article_title{
+            font-size: 22px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+        <header class="logobar">
+            <div class="logobar_left">
+                <label for="menu-switch" class="hb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="logo">
+                    <div class="logobar_wire"></div>
+                    <a href="index.html"><div class="logo_img"></div></a>
+                    <div class="logobar_wire"></div>
+                </div>
+                <nav class="main_nav">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="introduce.html">INTRODUCE</a></li>
+                    <li><a href="case.html">CASES</a></li>
+                    <li><a href="outfit.html">OUTFIT</a></li>
+                    <li><a href="reserve.html">RESERVE</a></li>
+                    <li><a href="index.html" class="main_nav_pic">
+                        <img src="theoneoff-material\comb.png"></a></li> 
+                </nav>
+                
+            </div>
+            <div class="logobar_right">   
+                <a href="" class="subscribe">SUBSERIBE</a>
+                <div class="member">
+                    <a href="reserve.html"><img src="theoneoff-material\top\member.svg"></a>
+                </div>
+            </div>
+        </header>
+        <section class="canvas">
+            <section class="advertise">
+                <div class="advertise_card">
+                    <button id="closeAdvertise">close</button>
+                    <a href="#" class="advertise_card_link">more</a>
+                    <div class="advertise_card_pic">
+                        <img src="theoneoff-material\top\about2.png" alt="">
+                    </div>
+                    <div class="advertise_card_text">
+                        <a href="#"><h2>Los Angeles style</h2></a>
+                        
+                        <a href="#"><p>BeautyCan</p></a>
+                    </div>
+                </div>                
+            </section>
+            <script>
+                function init(){
+                    document.getElementById("closeAdvertise").onclick = function() {
+                  var advertise = document.getElementsByClassName("advertise")[0];
+                  advertise.classList.add("advertise_hidden");
+                };
+                }
+                window.addEventListener('load', init, false);
+            </script>
+            <p class="banner_right" data-aos="fade-up">trendy style</p>
+            <p class="banner_caption" data-aos="fade-up">Introduce</p>
+            <div class="banner_annotation" data-aos="fade-up">
+                <p class="annotation_text">MEMBER<br>4 +<sup>(people)</sup></p>
+                <p class="annotation_location">EXPERIENCE<br>7 +<sup>(years)</sup></p>
+            </div>
+            <section class="introduce">
+                <section class="introduce_caption" data-aos="fade-right">
+                    <div class="introduce_caption_timeline" >
+                        <p>Fashion Style</p>
+                    <p>韓系歐巴</p>
+                    <p>Air bangs<sup>cool</sup></p>
+                    <p>Taiwan only</p>
+                    <p>懷舊風格</p>
+                    <p>Drowning</p>
+                    <p>Baby</p>
+                    <p>2030<sup>Zoom</sup></p>
+                    <p>紐伯辮</p>
+                    <p>Super Duper</p>
+                    <p>Live Show</p>
+                    <p>Mj Fresh Gang</p>
+                    <p>R$B</p>
+                    <p>just Believe</p>
+                    <p>Change</p>
+                    <p>Wait</p>
+                    <p>巴西捲</p>
+                    <p>Bo Fu</p>
+                    <p>Love</p>
+                    <p>烏梅子醬</p>
+                    <p>Amazing</p>
+                    <p>Way Up</p>
+                    <p>咖啡</p>
+                    <p>貓<sup>Peace</sup></p>
+                    <p>晴天</p>
+                    <p>韓系大波浪</p>
+                    <p>螺絲粉</p>
+                    <p>擱淺</p>
+                    <p>日系<sup>Street</sup></p>
+                    <p>特殊染髮</p>
+                    <p>New York</p>
+                    <p>Dreams coming</p>
+                    <p>Movies</p>
+                    </div>
+                </section>
+                <section class="introduce_page">
+                    <div class="card mb-3">
+                        <div class="row" data-aos="fade-up">
+                          <div class="col-md-4 d-flex justify-content-center">
+                            <img src="theoneoff-material\about_us\a1.png" class="img-fluid" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body" >
+                              <h5 class="card-title" data-aos="zoom-in">ROSE YEN</h5>
+                              <p class="card-text" data-aos="zoom-in">A hairstylist is a skilled professional who possesses creativity, precision, and expertise in cutting, styling, and transforming hair. They possess an eye for detail, stay updated with the latest trends, and work diligently to create personalized looks that enhance the beauty and confidence of their clients.
+                              </p>
+                              <p class="card-text" data-aos="zoom-in">ROSE YEN 專注於創造和維護時尚的髮型和髮型設計。ROSE YEN注重細節，緊跟時尚潮流，努力創造個性化的造型，提升客戶的美麗和自信。他們善於溝通並理解客戶的需求，並能提供專業建議和指導，使每個客戶都能擁有一個完美而獨特的髮型。</p>
+                              <a href="#"><p class="card-reserve" data-aos="zoom-in">Reservation Now</small></p></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-3">
+                        <div class="row " data-aos="fade-up">
+                          <div class="col-md-4 d-flex justify-content-center">
+                            <img src="theoneoff-material\about_us\a2.png" class="img-fluid" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title" data-aos="zoom-in">JEFFERY</h5>
+                              <p class="card-text" data-aos="zoom-in">A hairstylist is a skilled professional who possesses creativity, precision, and expertise in cutting, styling, and transforming hair. They possess an eye for detail, stay updated with the latest trends, and work diligently to create personalized looks that enhance the beauty and confidence of their clients.
+                              </p>
+                              <p class="card-text" data-aos="zoom-in">JEFFERY專注於創造和維護時尚的髮型和髮型設計。ROSE YEN注重細節，緊跟時尚潮流，努力創造個性化的造型，提升客戶的美麗和自信。他們善於溝通並理解客戶的需求，並能提供專業建議和指導，使每個客戶都能擁有一個完美而獨特的髮型。</p>
+                              <a href="#"><p class="card-reserve" data-aos="zoom-in">Reservation Now</small></p></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-3">
+                        <div class="row " data-aos="fade-up">
+                          <div class="col-md-4 d-flex justify-content-center">
+                            <img src="theoneoff-material\about_us\a3.png" class="img-fluid" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title" data-aos="zoom-in">LERU</h5>
+                              <p class="card-text" data-aos="zoom-in">A hairstylist is a skilled professional who possesses creativity, precision, and expertise in cutting, styling, and transforming hair. They possess an eye for detail, stay updated with the latest trends, and work diligently to create personalized looks that enhance the beauty and confidence of their clients.
+                              </p>
+                              <p class="card-text" data-aos="zoom-in">LERU 專注於創造和維護時尚的髮型和髮型設計。ROSE YEN注重細節，緊跟時尚潮流，努力創造個性化的造型，提升客戶的美麗和自信。他們善於溝通並理解客戶的需求，並能提供專業建議和指導，使每個客戶都能擁有一個完美而獨特的髮型。</p>
+                              <a href="#"><p class="card-reserve" data-aos="zoom-in">Reservation Now</small></p></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card mb-3">
+                        <div class="row " data-aos="fade-up">
+                          <div class="col-md-4 d-flex justify-content-center">
+                            <img src="theoneoff-material\about_us\a4.png" class="img-fluid" alt="...">
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="card-title" data-aos="zoom-in">MING</h5>
+                              <p class="card-text" data-aos="zoom-in">A hairstylist is a skilled professional who possesses creativity, precision, and expertise in cutting, styling, and transforming hair. They possess an eye for detail, stay updated with the latest trends, and work diligently to create personalized looks that enhance the beauty and confidence of their clients.
+                              </p>
+                              <p class="card-text" data-aos="zoom-in">MING 專注於創造和維護時尚的髮型和髮型設計。ROSE YEN注重細節，緊跟時尚潮流，努力創造個性化的造型，提升客戶的美麗和自信。他們善於溝通並理解客戶的需求，並能提供專業建議和指導，使每個客戶都能擁有一個完美而獨特的髮型。</p>
+                              <a href="#"><p class="card-reserve" data-aos="zoom-in">Reservation Now</small></p></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </section>
+            </section>
+            <div class="article">
+                <div class="row atricle_card">
+                    <div class="col-md-8" data-aos="zoom-in">
+                        <h5 class="article_title">What is Beauty時尚趨勢髮型秀</h5>
+                    </div>
+                    <div class="col-md-4" data-aos="zoom-in">
+                        <img src="theoneoff-material\top\z1.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="row atricle_card">
+                    <div class="col-md-8 " data-aos="zoom-in">
+                        <h5 class="article_title">men’s uno 超模決賽</h5>
+                    </div>
+                    <div class="col-md-4" data-aos="zoom-in">
+                        <img src="theoneoff-material\top\z2.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cloth">
+            <section class="footer">
+                <div class="footer_card">
+                    <p class="footer_logo">JEDFFERY</p>
+                    <p class="footer_content">The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vogue.com.</p>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="introduce.html">INTRODUCE</a></li>
+                    <li><a href="case.html">CASES</a></li>
+                    <li><a href="outfit.html">OUTFIT</a></li>
+                    <li><a href="reserve.html">RESERVE</a></li>
+                </div>
+                <div class="footer_font">
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-pinterest-p fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="footer_right">2023&copy;jeffery old school.© 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. jeffery may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.</div> 
+            </section>
+
+        </section>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    <script>
+        AOS.init({
+            duration:1500,
+        });
+    </script>
+</body>
+</html>

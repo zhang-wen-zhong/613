@@ -1,0 +1,27 @@
+<style>
+    .text-effect {
+        font-size: 60px;
+        font-weight: bold;
+        color: transparent;
+        background-image: linear-gradient(to right, black, gray, white);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: text-expand 2s ease-in-out infinite;
+    }
+
+    @keyframes text-expand {
+        0% {
+            background-size: 0% 100%;
+        }
+        50% {
+            background-size: 100% 100%;
+        }
+        100% {
+            background-size: 0% 100%;
+        }
+    }
+</style>
+
+<h1 class="text-effect">Hello, World!</h1>
+

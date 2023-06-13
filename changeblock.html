@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>內容切換</title>
+  <script>
+    function changeContent(contentId) {
+  var contentElements = document.getElementsByClassName('content');
+  for (var i = 0; i < contentElements.length; i++) {
+    contentElements[i].style.display = 'none';
+  }
+  
+  var selectedContent = document.getElementById(contentId);
+  selectedContent.style.display = 'block';
+}
+
+  </script>
+</head>
+<body>
+  <h1 onclick="changeContent('content1')">標題 1</h1>
+  <h1 onclick="changeContent('content2')">標題 2</h1>
+  <h1 onclick="changeContent('content3')">標題 3</h1>
+  
+  <div id="content1">這是第一個內容</div>
+  <div id="content2">這是第二個內容</div>
+  <div id="content3">這是第三個內容</div>
+</body>
+</html>

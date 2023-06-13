@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>会员登录</title>
+    <script>
+        function login() {
+            // 获取用户输入的用户名和密码
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // 进行简单的身份验证
+            if (username === "yoooook123" && password === "11111111") {
+                // 登录成功
+                alert("登录成功！");
+                // 可以执行其他操作，如跳转到会员页面等
+            } else {
+                // 登录失败
+                alert("用户名或密码错误！");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>会员登录</h1>
+    <form>
+        <label for="username">用户名:</label>
+        <input type="text" id="username" required><br><br>
+        <label for="password">密码:</label>
+        <input type="password" id="password" required><br><br>
+        <button type="button" onclick="login()">登录</button>
+    </form>
+</body>
+</html>

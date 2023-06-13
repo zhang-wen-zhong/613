@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>JEFFERY OLD SCHOOL</title>
+    <style>
+        *{
+            /* outline: 1px solid blue; */
+        }
+        .banner_right,
+        .annotation_text,
+        .banner_annotation{
+            display: none;
+        }
+        .who{
+            margin: 2% 0;
+        }
+        .who_caption p{
+            font-size: 12px;
+            text-align: center;
+        }
+        .who_contant_first,.who_contant_second{
+            font-size: 12px;
+        }
+        
+        @media screen and (min-width: 768px ){
+            .banner_right{
+                display: block;
+                text-align: end;
+                font-size: 16px;
+                padding: 2% 15%;
+                margin: 2% 0 0;
+                border-top: 1px solid #ccc;
+            }
+            .banner_caption{
+                font-size: 80px;
+                padding: 0 20%;
+                text-align: left;
+                
+            }
+            .banner_annotation{
+                padding: 0 0 0 20%;
+                display: flex;
+                width: 100%;
+                
+
+            }
+            .annotation_text{
+                width: 50%;
+                display: block;
+                font-size: 12px;
+            }
+            .annotation_location{
+                width: 50%;
+                display: block;
+                font-size: 12px;
+                padding: 0 2%;
+            }
+            
+            .who{
+            display: flex;
+            position: relative;
+            }
+            .who_caption{
+                width: 20%;
+                padding: 5% 0;
+                position: relative;
+            }
+            .who_caption p{
+                font-size: 20px;
+                position: sticky;
+                top: 0;
+            }
+            .who_contant_first{
+                border-top: 1px solid #ccc;
+                width: 40%;
+                padding: 5% 0;
+            }
+            .who_contant_first p,.who_contant_second p{
+                font-size: 16px;
+            }
+            .who_contant_second{
+                border-top: 1px solid #ccc;
+                width: 40%;
+                padding: 5% 2%;
+
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .banner_right{
+                font-size: 30px;
+            }
+            .banner_caption{
+                font-size: 100px; 
+            }
+            .annotation_text,.annotation_location{
+                font-size: 22px;
+            }
+            .who_caption p{
+                font-size: 30px;
+            }
+            .who_contant_first p,.who_contant_second p{
+                font-size: 22px;
+            }
+        }
+
+        .card img{
+          border: 2px solid white;
+          transition: border-color 0.5s ease;
+        }
+        .card img:hover {
+          border-color: rgb(0, 255, 55);
+        }
+        .card-title, .card-text{
+            font-size: 12px;
+        }  
+        .card-footer{
+            margin: 0 0 15% 0;
+        }
+        @media screen and (min-width: 768px ){
+            .card-title, .card-text,.card a{
+            font-size: 16px;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .card-title, .card-text, .card a{
+            font-size: 22px;
+            }
+        }
+
+        .team{
+            width: 100%;
+            display: flex;
+            margin: 2% 0;
+        }
+        .team_caption{
+            width: 20%;
+            position: relative;
+            text-align: center;
+        }
+        .team_caption p{
+            position: sticky;
+            top: 0;
+            font-size: 12px;
+        }     
+        .row{
+            width: 80%;
+        }
+        @media screen and (min-width: 768px ){
+            .team_caption p{
+                font-size: 20px;
+            }  
+        }
+        @media screen and (min-width: 1200px ){
+            .team_caption p{
+            font-size: 30px;
+            }
+        }
+        .story{
+            width: 100%;
+            display: flex;
+            margin: 5% 0;
+        }
+        .story_caption{
+            width: 20%;
+            position: relative;
+            text-align: center;
+        }
+        .story_caption p{
+            position: sticky;
+            top: 0;
+            font-size: 12px;
+        }
+        .story a, .story h4{
+            font-size: 12px;
+            color: green;
+        }
+        .story_content p{
+            font-size: 12px;
+        }
+        @media screen and (min-width: 768px ){
+            .story_caption p{
+                font-size: 20px;
+            }
+            .story a, .story h4, .story_content p{
+            font-size: 16px;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .story_caption p{
+            font-size: 30px;
+            }
+            .story a, .story h4, .story_content p{
+            font-size: 22px;
+            }
+        }
+
+
+        .adress{
+            width: 100%;
+            display: flex;
+            margin: 5% 0;
+        }
+        .adress_caption{
+            width: 20%;
+            position: relative;
+            text-align: center;
+        }
+        
+        .adress_caption p{
+            position: sticky;
+            top: 0;
+            font-size: 12px;
+        } 
+        .adress_content{
+            width: 80%;
+        }
+        .adress_content th, .adress_content td{
+            font-size: 12px;
+        }
+        @media screen and (min-width: 768px ){
+            .adress_caption p{
+            font-size: 20px;
+            }
+        }
+        @media screen and (min-width: 1200px ){
+            .adress_caption p{
+            font-size: 30px;
+            }
+            .adress_content th,.adress_content td{
+            font-size: 22px;
+            }
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-switch">
+        <header class="logobar">
+            <div class="logobar_left">
+                <label for="menu-switch" class="hb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="logo">
+                    <div class="logobar_wire"></div>
+                    <a href="index.html"><div class="logo_img"></div></a>
+                    <div class="logobar_wire"></div>
+                </div>
+                <nav class="main_nav">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="introduce.html">INTRODUCE</a></li>
+                    <li><a href="case.html">CASES</a></li>
+                    <li><a href="outfit.html">OUTFIT</a></li>
+                    <li><a href="reserve.html">RESERVE</a></li>
+                    <li><a href="index.html" class="main_nav_pic">
+                        <img src="theoneoff-material\comb.png"></a></li> 
+                </nav>
+                
+            </div>
+            <div class="logobar_right">   
+                <a href="" class="subscribe">SUBSERIBE</a>
+                <div class="member">
+                    <a href="reserve.html"><img src="theoneoff-material\top\member.svg"></a>
+                </div>
+            </div>
+        </header>
+        <section class="canvas">
+            <section class="advertise">
+                <div class="advertise_card">
+                    <button id="closeAdvertise">close</button>
+                    <a href="#" class="advertise_card_link">more</a>
+                    <div class="advertise_card_pic">
+                        <img src="theoneoff-material\top\about2.png" alt="">
+                    </div>
+                    <div class="advertise_card_text">
+                        <a href="#"><h2>Los Angeles style</h2></a>
+                        
+                        <a href="#"><p>BeautyCan</p></a>
+                    </div>
+                </div>                
+            </section>
+            <script>
+                function init(){
+                    document.getElementById("closeAdvertise").onclick = function() {
+                  var advertise = document.getElementsByClassName("advertise")[0];
+                  advertise.classList.add("advertise_hidden");
+                };
+                }
+                window.addEventListener('load', init, false);
+            </script>
+            <p class="banner_right" data-aos="fade-up"
+             >We are awesome.</p>
+            <p class="banner_caption" data-aos="fade-up"
+             >About</p>
+            <div class="banner_annotation" data-aos="fade-up"
+             >
+                <p class="annotation_text">TEAM<br>4 +<sup>(years)</sup></p>
+            <p class="annotation_location">LOCATION<br>4 +<sup>(office)</sup></p>
+            </div>
+            <section class="who" data-aos="fade-right">
+                <div class="who_caption">
+                    <p>1.Who we are.</p></div>
+                <div class="who_contant_first">
+                    <p>每個人都會面臨這樣的時刻，
+                        考試升學、工作、親情友情，
+                        總是讓我們感到焦慮和困惑。
+                        <br>
+                        有時候，我們看起來光鮮亮麗，但你不知道背後我們面對的壓力和挑戰，
+                        無論是業績、行銷還是作品呈現，都讓我們焦頭爛額。
+                        <br>
+                        其實，我們並不需要一直保持正面，
+                        聽那些充滿陳腐勵志的話語也不總是令人愉悅的。
+                        有時候，我們可以讓自己糟糕一點，
+                        放鬆一下，放任自己擺爛、暴飲暴食、甚至嗨到頭痛爆，
+                        也許甚至會有一陣歇斯底里的情緒爆發。
+                        <br>
+                        釋放完這些情緒後，換個念頭笑一笑，
+                        把那些瑣事視若無睹，
+                        也許這些事情都會有更好的出口。
+                        假裝的情緒是無法幫助我們完成任何事情的，
+                        笑容會為你帶來好運，但假笑卻無法。
+                        <br>
+                        今天，我剛好是每個月釋放情緒的日子，
+                        我打算去買五包洋芋片，
+                        讓自己享受一下，才能開心地面對新的挑戰，
+                        即使明天可能會水腫一整天。
+                        <br>
+                        當然，釋放情緒也要有節制，
+                        我們不應該去傷害他人，否則就會付出代價。
+                        就像我，只需要吃洋芋片就能感到滿足，
+                        你明白嗎？大家一起加油！</p>
+                </div>
+                <div class="who_contant_second">
+                    <p>Sometimes, amidst the chaos and uncertainties, I find solace in the art of expression. Words become my refuge, allowing me to pour out my emotions and find a semblance of peace.</p><p> In this vast sea of emotions, I navigate through the highs and lows, guided by the gentle whispers of my heart. Each word I write carries the weight of my experiences, the joy, the pain, the love, and the longing. </p><p>It is in these moments, when my pen dances on the paper, that I truly feel alive. And in this simple act of self-expression, I find liberation and a renewed sense of hope.</p><p>It is in these moments, when my pen dances on the paper, that I truly feel alive. And in this simple act of self-expression, I find liberation and a renewed sense of hope.</p>
+                </div>
+            </section>
+            
+            <section class="team" data-aos="fade-right">
+                <div class="team_caption">
+                    <p>2.Team</p>
+                </div>
+                <section class="row">
+                    <section class="card-group">
+                        <div class="col-12 col-md-6 col-lg-3 col-xl-3">
+                            <div class="card border border-0">
+                                <img src="theoneoff-material\about_us\a1.png" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                <h5 class="card-title">YEN</h5>
+                                <p class="card-text">Beyond technical expertise, a great hair stylist possesses excellent communication skills. <p>
+                                </div>
+                                <div class="card-footer border border-0 ">
+                                    <a href="#" class="text-body-secondary">Reservation Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-xl-3">
+                            <div class="card border border-0">
+                                <img src="theoneoff-material\about_us\a2.png" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                <h5 class="card-title">JEFFERY</h5>
+                                <p class="card-text">Beyond technical expertise, a great hair stylist possesses excellent communication skills.<p>
+                                </div>
+                                <div class="card-footer border border-0">
+                                    <a href="#" class="text-body-secondary">Reservation Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-xl-3">
+                            <div class="card border border-0">
+                                <img src="theoneoff-material\about_us\a3.png" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                <h5 class="card-title">LERU</h5>
+                                <p class="card-text">Beyond technical expertise, a great hair stylist possesses excellent communication skills.<p>
+                                </div>
+                                <div class="card-footer border border-0">
+                                    <a href="#" class="text-body-secondary">Reservation Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 col-xl-3">
+                            <div class="card border border-0">
+                                <img src="theoneoff-material\about_us\a4.png" class="card-img-top" alt="...">
+                                <div class="card-body ">
+                                <h5 class="card-title">MING</h5>
+                                <p class="card-text">Beyond technical expertise, a great hair stylist possesses excellent communication skills.<p>
+                                </div>
+                                <div class="card-footer border border-0">
+                                    <a href="#" class="text-body-secondary">Reservation Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                
+            </section>
+            <section class="story" data-aos="fade-right">
+                <div class="story_caption">
+                    <p>3.Story</p>
+                </div>
+                <div class="row" >
+                    <div class="d-none d-md-block col-md-4">
+                      <nav id="story_group" class="h-100 flex-column align-items-stretch pe-4 border-end">
+                        <nav class="nav nav-pills flex-column" >
+                          <a class="nav-link ms-3 my-1" href="#item-1">髒辮起源</a>
+                          <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-1-1">髒辮傳承</a>
+                            <a class="nav-link ms-3 my-1" href="#item-1-2">髒辮流行</a>
+                          </nav>
+                          <a class="nav-link ms-3 my-1" href="#item-2">非洲文化中的髒辮</a>
+                          <a class="nav-link ms-3 my-1" href="#item-3">傳統文化</a>
+                          <nav class="nav nav-pills flex-column">
+                            <a class="nav-link ms-3 my-1" href="#item-3-1">雷鬼音樂</a>
+                            <a class="nav-link ms-3 my-1" href="#item-3-2">全球風潮</a>
+                          </nav>
+                        </nav>
+                      </nav>
+                    </div>
+                  
+                    <div class="col-12 col-md-8">
+                      <div data-bs-spy="scroll" data-bs-target="#story_group" data-bs-smooth-scroll="true" class="story_content" tabindex="0" >
+                        <div id="item-1">
+                          <h4>髒辮起源</h4>
+                          <p>髒辮（或稱為「dreadlocks」）是一種獨特的髮型，其起源可以追溯到古埃及和古印度。在古埃及，法老和貴族階級的人經常將頭髮糾結成糾結的辮子，以顯示他們的尊貴地位。同樣地，在古印度，修行者和聖人也經常以髒辮表達他們與世俗世界的脫離。這些古代文化對髒辮的使用為其起源奠定了基礎。</p>
+                        </div>
+                        <div id="item-1-1">
+                          <h4>髒辮傳承</h4>
+                          <p>在非洲，髒辮在許多部落和文化中扮演著重要的角色。它們被視為一種對於自然和神聖的表達，也象徵著身份、社會地位和文化身份。這種髮型在非洲部落中傳遞著許多信息，如部落的歷史、家族的身份等。因此，非洲是髒辮起源的關鍵地區，它在這裡發展出了獨特而多樣的文化意義。</p>
+                        </div>
+                        <div id="item-1-2">
+                          <h4>髒辮流行</h4>
+                          <p>隨著時間的推移，髒辮已經跨越種族和文化的界限，成為全球各地受歡迎的髮型之一。它不僅被視為一種個人風格的表達，更是對自由、自然和個人身份的象徵。髒辮的起源承載著豐富的文化背景，我們在欣賞和使用髒辮時，應該尊重其來源和傳統意義。</p>
+                        </div>
+                        <div id="item-2">
+                          <h4>非洲文化中的髒辮</h4>
+                          <p>髒辮在非洲文化中扮演著重要的角色，被視為對自然和神聖的表達。許多非洲部落將頭髮糾結成髒辮，以示他們與大自然的聯繫和尊重。髒辮還象徵著身份和社會地位，在非洲部落中它可以傳遞許多信息，如部落的歷史、家族的身份和社群的地位。</p>
+                        </div>
+                        <div id="item-3">
+                          <h4>傳統文化</h4>
+                          <p>髒辮也是非洲文化的一部分，它反映了不同地區和部落的獨特風格和傳統。不同的編織技巧、用料和造型使得每個髒辮都有其獨特的特色。這種文化遺產在現代非洲社會中仍然被珍視和傳承，同時也在全球范圍內引起了廣泛的關注和喜愛。</p>
+                        </div>
+                        <div id="item-3-1">
+                          <h4>雷鬼音樂</h4>
+                          <p>對非洲人而言，髒辮是一種自豪的象徵，它們代表著傳統價值觀、對自然的敬畏和文化身份的展示。許多非洲人將髒辮視為一種尊重和保持傳統的方式，並通過這種髮型來表達他們的身份認同。</p>
+                        </div>
+                        <div id="item-3-2">
+                          <h4>全球風潮</h4>
+                          <p>髒辮在美洲和加勒比地區與非裔血統和雷鬼音樂文化相關聯。這裡的非裔奴隸將他們的頭髮糾結成髒辮，既是出於實用的原因（在艱難的勞動條件下，髒辮能夠更方便地照顧頭髮），也是一種保留文化傳統和身份認同的方式。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>      
+            </section>
+            <section class="adress" data-aos="fade-right">
+                <div class="adress_caption">
+                    <p>4.Adress</p>
+                </div>
+                <div class="adress_content">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">店名</th>
+                            <th scope="col">地址</th>
+                            <th scope="col">電話</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>桃園總店</td>
+                            <td>桃園市民生路105號3樓</td>
+                            <td>03-3333369</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>台北萬華店</td>
+                            <td>台北市萬華區大理街26號</td>
+                            <td>02-23380060</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>台南成大店</td>
+                            <td>臺南市東區育樂街9號2樓</td>
+                            <td>06-2097569</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>台中逢甲店</td>
+                            <td>台中市西屯區西安街172巷9號 </td>
+                            <td>04-24520467</td>
+                          </tr>
+                          
+                        </tbody>
+                      </table>
+                </div>
+            </section>
+        </section>
+        <section class="cloth">
+            <section class="footer">
+                <div class="footer_card">
+                    <p class="footer_logo">JEDFFERY</p>
+                    <p class="footer_content">The latest fashion news, beauty coverage, celebrity style, fashion week updates, culture reviews, and videos on Vogue.com.</p>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="introduce.html">INTRODUCE</a></li>
+                    <li><a href="case.html">CASES</a></li>
+                    <li><a href="outfit.html">OUTFIT</a></li>
+                    <li><a href="reserve.html">RESERVE</a></li>
+                </div>
+                <div class="footer_font">
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-pinterest-p fa-lg"></i></a>
+                    </div>
+                    <div class="footer_icon">
+                        <a href="#"><i class="fa-brands fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="footer_right">2023&copy;jeffery old school.© 2023 Condé Nast. All rights reserved. Use of this site constitutes acceptance of our User Agreement and Privacy Policy and Cookie Statement and Your California Privacy Rights. jeffery may earn a portion of sales from products that are purchased through our site as part of our Affiliate Partnerships with retailers. The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.</div> 
+            </section>
+
+        </section>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    <script>
+        AOS.init({
+            duration:1500,
+        });
+    </script>
+
+</body>
+</html>

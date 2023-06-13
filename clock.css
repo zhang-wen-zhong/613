@@ -1,0 +1,155 @@
+.clock_group{}
+    .clock{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+    }
+    .clock .hour{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        z-index: 3;
+    }
+    /* 小時數字位置 */
+    .hr1{
+        top: 6%;
+        right: 24%;
+    }
+    .hr2 {
+        top: 18%;
+        right: 10%;
+    }
+    .hr3{
+        top: 38%;
+        right: 2%;
+    }
+    .hr4{
+        top: 60%;
+        right: 6%;
+    }
+    .hr5{
+        top: 79%;
+        right: 22%;
+    }
+    .hr6{
+        bottom: 0%;
+        right: 44%;
+    }
+    .hr7{
+        top: 79%;
+        left: 22%;
+    }
+    .hr8{
+        top: 60%;
+        left: 6%;
+    }
+    .hr9{
+        top: 38%;
+        left: 2%;
+    }
+    .hr10{
+        top: 18%;
+        left: 10%;
+    }
+    .hr11{
+        top: 6%;
+        left: 24%;
+    }
+    .hr12{
+        top: 0%;
+        right: 44%;
+    }
+    .point{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+    }
+    
+    /* 分針 時針 秒針 */
+    .clock .hand{
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        background-color: black;
+        transform: translateX(-50%);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        /* 從底部來轉 */
+        transform-origin: bottom;
+        --rotation:0;
+        transform: rotate(calc(var(--rotation)*1deg));
+        z-index: 8;
+    }
+    .clock .second-hand {
+        left: 49.5%;
+        width: 3px;
+        height: 45%;
+        background-color: rgb(3, 82, 19);
+    }
+    .clock .minute-hand{
+        left: 49.2%;
+        width: 3px;
+        height: 34%;
+        background-color: white;
+    }
+    .clock .hour-hand {
+        left: 48.9%;
+        width: 5px;
+        height: 20%;
+        background-color: white;
+    }
+    
+    .clock_jamaica{
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+    }
+    .clock_jamaica .hour{
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        z-index: 3;
+    }
+    .clock_jamaica .hand{
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        background-color: black;
+        transform: translateX(-50%);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        /* 從底部來轉 */
+        transform-origin: bottom;
+        --rotation:0;
+        transform: rotate(calc(var(--rotation)*1deg));
+        z-index: 8;
+    }
+    .clock_jamaica .second-hand {
+        left: 49.5%;
+        width: 3px;
+        height: 45%;
+        background-color: rgb(3, 82, 19);
+    }
+    .clock_jamaica .minute-hand{
+        left: 49.2%;
+        width: 3px;
+        height: 34%;
+        background-color: white;
+    }
+    .clock_jamaica .hour-hand {
+        left: 48.9%;
+        width: 5px;
+        height: 20%;
+        background-color: white;
+    }

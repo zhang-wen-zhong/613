@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.slide-in-text {
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+
+    </style>
+</head>
+<body>
+    <p class="slide-in-text">這是一個示例文字</p>
+
+</body>
+</html>

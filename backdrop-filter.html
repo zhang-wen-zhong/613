@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      overflow: hidden;
+        /* outline: 1px solid blue; */
+      height: 50vh;
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(theoneoff-material/top/z4.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    /* .navbar {
+      height: 64px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, .3);
+    } */
+    .card {
+      height: 60%;
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, .3);
+      border-radius: 10px;
+      font-size: 30px;
+      padding: 20px;
+    }
+    /* .backdrop-blur { */
+      /* backdrop-filter: invert(8px); */
+    /* } */
+    .backdrop-invert {
+  transition: 1s all;
+}
+.backdrop-invert:hover {
+  /* background-color: rgba(0, 0, 0, .25); */
+  backdrop-filter: invert(80%);
+}
+        
+
+
+    </style>
+</head>
+
+    <body >
+        <!-- <div class="navbar backdrop-blur">
+          這是導覽列
+        </div> -->
+        
+        <div class="wrap">
+            <div class="card backdrop-invert">  
+              </div>
+        </div>
+
+    
+          
+</body>
+</html>
